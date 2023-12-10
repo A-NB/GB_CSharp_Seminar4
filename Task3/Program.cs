@@ -16,14 +16,6 @@ int[] FillArray(int size)
     return arr;
 }
 
-void PrintArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write(arr[i] + " ");
-    }
-}
-
 int[] ReverseArray(int[] arr)
 {
     size = arr.Length;
@@ -35,6 +27,17 @@ int[] ReverseArray(int[] arr)
         arr[i] = tempElement;
     }
     return arr;
+}
+
+void PrintArray(int[] arr)
+{
+    int size = arr.Length;
+    string sep = ", ";
+    for (int i = 0; i < size; i++)
+    {
+        if (i + 1 == size) sep = "";
+        Console.Write(arr[i] + sep);
+    }
 }
 
 int[] list = FillArray(size);
