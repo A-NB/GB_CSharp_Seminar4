@@ -9,8 +9,8 @@ int GetSumOfDigits(int num)
     int sum = 0;
     while (num > 0)
     {
-        sum = sum + num % 10;
-        num = num / 10;
+        sum += num % 10;
+        num /= 10;
     }
     return sum;
 }
@@ -29,6 +29,7 @@ do
     Console.Clear();    
     System.Console.Write("Введите число.\nПрограмма завершает работу, если будет нажата клавиша 'q'\nили сумма цифр числа чётная: ");
     Console.WriteLine();
+    Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16");
     symbols = Console.ReadLine();
     if (EndInput(symbols))
     {
